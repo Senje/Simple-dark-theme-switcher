@@ -1,11 +1,15 @@
+"use strict";
+
+(function () {
+    
 // Default div class for button
-const button = '.switcher';
+const button = '.dark';
 // ID for <style>
 const styleID = 'color-switcher';
 // name for localStorage item
-const storageItem = 'switcher';
+const storageItem = 'dark';
 
-/* default vars for setting theme color */
+/* vars for setting dark theme color */
 const backgroundColor = '#212529';
 const fontColor = '#f4f3ef';
 
@@ -13,6 +17,11 @@ const divs = {
     'body': {
         'background-color': backgroundColor,
         'color': fontColor
+    },
+    '.container': {
+        'background-color': 'red',
+        'border': '1px solid yellow',
+        'width': '200px'
     }
 }
 
@@ -24,17 +33,17 @@ if (localStorage.getItem(storageItem)) {
 
 // Listiner for button
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
     let element = document.querySelector(button);
     element.addEventListener('click', function () {
-        var item = localStorage.getItem(storageItem);
+        let item = localStorage.getItem(storageItem);
         if (parseInt(item) === 1) {
             switchToDefault();
         } else {
             switchToBlack();
         }
     });
-}
+});
 
 // function for switching to black theme
 function switchToBlack() {
@@ -61,7 +70,8 @@ function switchToBlack() {
 
 // Return to default theme
 function switchToDefault() {
-    let element = document.querySelector('#' + styleID);
+    const element = document.querySelector('#' + styleID);
     localStorage.removeItem(storageItem);
     element.remove();
 }
+})();
