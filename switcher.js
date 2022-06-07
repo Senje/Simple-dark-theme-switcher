@@ -1,11 +1,11 @@
 // Default div class for button
-const button = '.dark';
+const button = '.switcher';
 // ID for <style>
 const styleID = 'color-switcher';
 // name for localStorage item
-const storageItem = 'dark';
+const storageItem = 'switcher';
 
-/* vars for setting dark theme color */
+/* default vars for setting theme color */
 const backgroundColor = '#212529';
 const fontColor = '#f4f3ef';
 
