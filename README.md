@@ -16,10 +16,10 @@ ID, который будет присвоен измененному <style/>
 В объекте помимо стандартных backgroundColor и fontColor Вы можете задать любые цвета
 
 # FOR EXAMPLE:
-'.container': {
-  'background-color': 'red',
-  'color': 'green',
-  'border': 'yellow 1px solid'
+'.container': {<br>
+  'background-color': 'red',<br>
+  'color': 'green',<br>
+  'border': 'yellow 1px solid'<br>
 }
 
 Пример выше задаст .container красный фон, зеленный текст и желтый бордер.
